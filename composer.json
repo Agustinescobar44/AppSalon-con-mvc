@@ -1,0 +1,22 @@
+{
+    "name": "agustinesco/app-salon_php_mvc_js_sass",
+    "description": "Proyecto de php8 MVC , SQL, SASS, Gulp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\":"./controllers",
+            "Model\\" : "./models",
+            "clases\\" : "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Agustin Lautaro Escobar",
+            "email": "agustinescobar@hotmail.com.ar"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

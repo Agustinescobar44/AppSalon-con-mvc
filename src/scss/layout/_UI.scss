@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.imagen{
+    height: 30rem;
+    background-image: url('../img/1.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include m.tablet{
+        height: auto;
+    }
+}
+
+.contenedor-app{
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        min-height: 100vh;
+    }
+}
+
+.app{
+    width: 95%;
+    margin: 0 auto;
+    padding: 3rem;
+
+    @include m.tablet{
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 3rem 2rem 0 1rem;
+    }
+}
+
+.barra{
+    margin: v.$separacion 0;
+    
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .boton{
+        @include m.boton(v.$negro, v.$blanco);
+        margin:0;
+    }
+}
+.barra-servicios{
+    margin-bottom: v.$separacion;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        gap: calc(v.$separacion/2);
+    }
+
+    .boton{
+       margin: 0 0 1rem 0; 
+    }
+}
